@@ -10,19 +10,19 @@ theme = "jane"
 publishDir = "docs"
 
 hasCJKLanguage = true     # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
-paginate = 3              # Number of articles displayed on the homepage  # 首页每页显示的文章数
+paginate = 10              # Number of articles displayed on the homepage  # 首页每页显示的文章数
 rssLimit = 20             # Limit Entry Count to Rss file # 限制 Rss 文章输出数量
 disqusShortname = ""      # disqus_shortname
 googleAnalytics = ""      # UA-XXXXXXXX-X
 copyright = ""            # default: author.name ↓        # 默认为下面配置的author.name ↓
 
 # language support # en / zh-cn / other... translations present in i18n/
-defaultContentLanguage = "en"           # Default language to use
-[languages.en]
-  languageCode = "en"
+defaultContentLanguage = "zh-cn"           # Default language to use
+[languages.zh-cn]
+  languageCode = "zh-cn"
 
 [author]                  # essential                     # 必需
-  name = "kuperxu"
+  name = "kuperxu(活在梦里)"
 
 [sitemap]                 # essential                     # 必需
   changefreq = "weekly"
@@ -49,22 +49,28 @@ defaultContentLanguage = "en"           # Default language to use
   weight = 40
   identifier = "categories"
   url = "/categories/"
-[[menu.main]]
-  name = "external-link"
-  weight = 50
-  url = "https://gohugo.io"
+#[[menu.main]]
+#  name = "external-link"
+#  weight = 50
+#  url = "https://gohugo.io"
 
 
 [params]
-  since = "2017"            # Site creation time          # 站点建立时间
+  since = "2019"            # Site creation time          # 站点建立时间
   homeFullContent = false   # if false, show post summaries on home page. Othewise show full content.
   rssFullContent = true     # if false, Rss feed instead of the summary
 
   # site info (optional)                                  # 站点信息（可选，不需要的可以直接注释掉）
-  logoTitle = "Jane"        # default: the title value    # 默认值: 上面设置的title值
-  keywords = ["Hugo", "theme","jane"]
+  logoTitle = "kuper"        # default: the title value    # 默认值: 上面设置的title值
+  keywords = ["Hugo", "blog","jane","kuperxu"]
   description = "Hugo theme jane example site."
 
+  # paginate of archives, tags and categories             # 归档、标签、分类每页显示的文章数目，建议修改为一个较大的值
+  archive-paginate = 50
+
+  # show word count and read time ?                       # 是否显示字数统计与阅读时间
+  moreMeta = true
+  
   # The date format to use; for a list of valid formats, see https://gohugo.io/functions/format/
   dateFormatToUse = "2006-01-02"
 
@@ -80,21 +86,21 @@ defaultContentLanguage = "en"           # Default language to use
   customJS = []             # if ['custom.js'], load '/static/js/custom.js' file
 
   [params.social]                                         # 社交链接
-    a-email = "mailto:your@email.com"
-    b-stack-overflow = "http://localhost:1313"
-    c-twitter = "http://localhost:1313"
-    d-facebook = "http://localhost:1313"
-    e-linkedin = "http://localhost:1313"
-    f-google = "http://localhost:1313"
-    g-github = "http://localhost:1313"
-    h-weibo = "http://localhost:1313"
-    i-zhihu = "http://localhost:1313"
-    j-douban = "http://localhost:1313"
-    k-pocket = "http://localhost:1313"
-    l-tumblr = "http://localhost:1313"
-    m-instagram = "http://localhost:1313"
-    n-gitlab = "http://localhost:1313"
-    o-goodreads = "http://localhost:1313"
-    p-coding = "http://localhost:1313"
-    q-bilibili = "http://localhost:1313"
-    r-codeforces = "http://localhost:1313"
+    a-email = "kuperxu@qq.com"
+    b-stack-overflow = "https://stackoverflow.com/users/4712292/kuperxu"
+    #c-twitter = "http://localhost:1313"
+    #d-facebook = "http://localhost:1313"
+    #e-linkedin = "http://localhost:1313"
+    f-google = "https://www.google.com.hk"
+    g-github = "https://github.com/kuperxu"
+    #h-weibo = "http://localhost:1313"
+    i-zhihu = "https://www.zhihu.com/people/xu-ji-guang/activities"
+    #j-douban = "http://localhost:1313"
+    #k-pocket = "http://localhost:1313"
+    #l-tumblr = "http://localhost:1313"
+    #m-instagram = "http://localhost:1313"
+    #n-gitlab = "http://localhost:1313"
+    #o-goodreads = "http://localhost:1313"
+    #p-coding = "http://localhost:1313"
+    #q-bilibili = "http://localhost:1313"
+    #r-codeforces = "http://localhost:1313"
