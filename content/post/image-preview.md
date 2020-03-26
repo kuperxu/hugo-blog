@@ -20,9 +20,7 @@ Now, we could use `{{</* gallery */>}}` shortcode in hugo-theme-jane.
 
 This is an image in `static/image` folder.
 
-```markdown
 ![This is an image in `static/image` folder.](/image/example.jpg)
-```
 
 <!--more-->
 
