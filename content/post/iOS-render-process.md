@@ -3,6 +3,8 @@ title: "iOS图片渲染"
 date: 2019-08-18T15:03:19+08:00
 draft: false
 catalog: true
+tags: ["render", "iOS"]
+categories: ["render", "iOS"]
 layout: Posts
 ---
 

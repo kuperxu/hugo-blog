@@ -1,19 +1,19 @@
-+++
-title = "Getting Started with Hugo"
-description = ""
-tags = [
-    "go",
-    "golang",
-    "hugo",
-    "development",
-]
-date = "2014-04-02"
-categories = [
-    "Development",
-    "golang",
-    "index",
-]
-+++
+---
+title: "Image Preview"
+date: 2018-03-03T16:01:23+08:00
+lastmod: 2018-03-04T16:01:23+08:00
+draft: true
+tags: ["preview", "image", "shortcodes"]
+categories: ["Hugo"]
+
+menu:
+  main:
+    parent: "Stars"
+    weight: 3
+---
+
+
+
 
 ## Step 1. Install Hugo
 
@@ -74,7 +74,7 @@ are located at the same relative location as the url, in our case
 Change and save this file.. Notice what happened in your terminal.
 
     > Change detected, rebuilding site
-
+    
     > 29 pages created
     > 0 tags index created
     > in 26 ms

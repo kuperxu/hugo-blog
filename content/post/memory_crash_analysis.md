@@ -1,6 +1,8 @@
 ---
 title: "Memory_crash_analysis"
 date: 2019-11-28T15:06:01+08:00
+tags: ["Crash", "iOS"]
+categories: ["Crash", "iOS"]
 draft: true
 ---
 
@@ -15,7 +17,7 @@ draft: true
 - 每次Crash堆栈都各不同的。90%以上Crash在主线程。
 
 - Debug面板报错,这里可以确认是内存出现了问题，并且是内存被某个操作做了篡改。
-  ```objective-c
+  ```
   malloc: Incorret checksum for freed object 0x11c3dd200: probably modified after being freed.Corrupt value :0x0
   malloc:*** set a breakpoint in malloc_error_break to debug
   ```
@@ -30,7 +32,7 @@ draft: true
 
 3.通过分析来确认问题函数。发现在工程中有一处代码是对图片做主题色分析，大致实现是取image的RGB来计算平均值，根据平均值评估图片是暗色系还是亮色系。
 
-![image-20191128155737370](/Users/kuperxu/Documents/myGitHub/myBlog/docs/image/image-20191128155737370.png)
+![image-20191128155737370](/image/image-20191128155737370.png)
 
 4.如上图，发现问题如上，此接口有一步流程是将图片数据复制到一个malloc出来的数组。而出问题的地方在于pixels数据长度相比data中的长度要远小，这是为什么呢，相差也太大了吧。按我们正常的理解，一张图被完全Decode出来应当是RGBARGBA 这样完整的排序，可怎么会出现63792这个值系统是怎么搞得？？？
 
