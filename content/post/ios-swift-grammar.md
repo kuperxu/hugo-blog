@@ -33,3 +33,11 @@ byte：
 最小的可寻址存储单元。
 
 iOS最小内存分配16B。
+
+### little knowloage
+
+clang -x objective-c -rewrite-objc -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk file.m
+
+```
+clang -x objective-c -rewrite-objc -fobjc-arc -fobjc-runtime=ios-8.0.0 -isysroot
+```
